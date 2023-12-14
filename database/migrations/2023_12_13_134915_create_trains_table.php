@@ -22,8 +22,8 @@ return new class extends Migration
             $table->tinyInteger('binario_partenza')->nullable();
             $table->smallInteger('codice_treno');
             $table->tinyInteger('numero_carrozze');
-            $table->tinyInteger('in_orario')->default(1);
-            $table->tinyInteger('cancellato')->default(0);
+            $table->boolean('in_orario')->default(1);
+            $table->boolean('cancellato')->default(0);
             $table->timestamps();
         });
     }
